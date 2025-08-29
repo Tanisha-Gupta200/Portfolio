@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (formData.name.length < 4) {
       nameError.textContent = "Name must be at least 4 characters long.";
       nameError.classList.remove("hidden");
+      alert("Name must be at least 4 characters long.")
       return;
     }
 
