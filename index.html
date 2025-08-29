@@ -21,31 +21,29 @@
       body {
         font-family: "Playfair Display", serif;
         font-weight: 600;
-        
       }
 
       html {
         scroll-behavior: smooth;
       }
 
-            @keyframes scaleImage {
-              0% {
-                transform: scale(1);
-              }
-              50% {
-                transform: scale(1.1);
-                box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
-              }
-              100% {
-                transform: scale(1);
-              }
-            }
-          </style>
-
+      @keyframes scaleImage {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+          box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
 
   <body
-    class=" h-screen flex flex-col min-h-screen overflow-y-auto overflow-x-hidden"
+    class="h-screen flex flex-col min-h-screen overflow-y-auto overflow-x-hidden"
   >
     <header class="w-full fixed top-0 z-50 bg-white shadow-md">
       <div
@@ -76,7 +74,7 @@
             >Achievements</a
           >
           <a
-            href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:141a63cb-23a7-4df4-967c-7cb9acd98a35" 
+            href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:141a63cb-23a7-4df4-967c-7cb9acd98a35"
             target="_blank"
             class="hover:text-blue-500 transition"
             >CV</a
@@ -90,33 +88,31 @@
         >
           <i class="fa-solid fa-palette"></i>
         </button>
-<button id="menu-toggle" 
-          class="md:hidden bg-gray-700 text-white px-4 py-2 rounded shadow hover:bg-gray-800 transition">
-    Menu
-  </button>
-
-        
+        <button
+          id="menu-toggle"
+          class="md:hidden bg-gray-700 text-white px-4 py-2 rounded shadow hover:bg-gray-800 transition"
+        >
+          Menu
+        </button>
       </div>
     </header>
 
-   
-<nav id="mobile-menu" 
-     class="md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 
-            text-gray-700 text-2xl font-semibold bg-gray-100 
-            transform translate-x-full transition-transform duration-300 ease-in-out">
-  
-  <a href="#home" class="hover:text-black">Home</a>
-  <a href="#projects" class="hover:text-black">Projects</a>
-  <a href="#contact" class="hover:text-black">Contact</a>
-  <a href="#timeline" class="hover:text-black">Journey</a>
-  <a href="#experience" class="hover:text-black">Experience</a>
-   <a
-            href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:141a63cb-23a7-4df4-967c-7cb9acd98a35" 
-            target="_blank"
-            class="hover:text-blue-500 transition"
-            >CV</a
-          >
-</nav>
+    <nav
+      id="mobile-menu"
+      class="md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 text-gray-700 text-2xl font-semibold bg-gray-100 transform translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <a href="#home" class="hover:text-black">Home</a>
+      <a href="#projects" class="hover:text-black">Projects</a>
+      <a href="#contact" class="hover:text-black">Contact</a>
+      <a href="#timeline" class="hover:text-black">Journey</a>
+      <a href="#experience" class="hover:text-black">Experience</a>
+      <a
+        href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:141a63cb-23a7-4df4-967c-7cb9acd98a35"
+        target="_blank"
+        class="hover:text-blue-500 transition"
+        >CV</a
+      >
+    </nav>
 
     <main class="flex-grow">
       <section id="home" class="w-full py-10 relative overflow-hidden">
@@ -126,18 +122,18 @@
           <div
             class="flex flex-col justify-center gap-5 text-center lg:text-left pt-2 px-4 mt-2 flex-1 z-10"
           >
-            <h1 class="text-[35px]  font-medium text-[#343d68]">
+            <h1 class="text-[35px] font-medium text-[#343d68]">
               Hi!! Tanisha Gupta
             </h1>
-            <h2 class="text-[45px] leading-[45px]  font-semibold text-[#343d68]">
+            <h2 class="text-[45px] leading-[45px] font-semibold text-[#343d68]">
               I am a <span class="text-[#4e45d5] font-extrabold role"></span>
             </h2>
             <p
-              class="mt-2 md:mb-4 w-[90%] sm:w-[60%] lg:w-[70%] mx-auto lg:mx-0 font-bold  text-gray-700"
+              class="mt-2 md:mb-4 w-[90%] sm:w-[60%] lg:w-[70%] mx-auto lg:mx-0 font-bold text-gray-700"
             >
               I'm a software developer and here is my portfolio website.<br />
               Here you'll learn about my journey as a software developer.<br />
-              I am Currently in my Fourth Year of Btech in Computer Science<br/>
+              I am Currently in my Fourth Year of Btech in Computer Science<br />
               Currently I am a Full Stack Web Developer Intern in Capsitech.
             </p>
             <a
@@ -163,13 +159,13 @@
       </section>
 
       <section id="projects" class="w-full px-4 py-20">
-        <div class="max-w-[1200px] mx-auto  ">
-          <h2 class="text-4xl font-bold text-center  text-blue-500 mb-5">
+        <div class="max-w-[1200px] mx-auto">
+          <h2 class="text-4xl font-bold text-center text-blue-500 mb-5">
             My Projects
           </h2>
-          <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-5  ">
+          <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-5">
             <div
-              class="bg-gray-100 mb-5 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition "
+              class="bg-gray-100 mb-5 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
             >
               <img
                 src="./images/project/project1.png"
@@ -224,7 +220,6 @@
             Achievements
           </h2>
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            
             <div class="bg-white p-6 rounded-xl shadow-md text-center">
               <h2 class="text-xl font-semibold mb-2">LeetCode Challenge</h2>
               <p class="mb-4 text-gray-600">Solved 200+ problems</p>
@@ -254,7 +249,9 @@
               class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center"
             >
               <h3 class="text-xl font-semibold mb-2">Smart India Hackathon</h3>
-              <p class="text-gray-600 mb-4">Winner of Internal Hackathon - Plant Disease Detection</p>
+              <p class="text-gray-600 mb-4">
+                Winner of Internal Hackathon - Plant Disease Detection
+              </p>
               <a
                 href="http://smartindiahackathon.com"
                 target="_blank"
@@ -286,24 +283,16 @@
           <div
             class="lg:w-1/2 flex flex-wrap gap-6 justify-center items-center"
           >
-            <img src="./images/stack/HTML.png" 
-            class="w-16 hover:scale-125" />
-            <img src="./images/stack/CSS.png"
-             class="w-16 hover:scale-125" />
+            <img src="./images/stack/HTML.png" class="w-16 hover:scale-125" />
+            <img src="./images/stack/CSS.png" class="w-16 hover:scale-125" />
             <img
               src="./images/stack/Javascript.svg"
               class="w-16 hover:scale-125"
             />
-            <img src="./images/stack/React.png"
-             class="w-16 hover:scale-125" />
-            <img
-              src="./images/stack/NodeJs.svg"
-              class="w-16 hover:scale-125"
-            />
-            <img src="./images/stack/Next.svg" 
-            class="w-16 hover:scale-125" />
-            <img src="../images/stack/Redux.svg" 
-            class="w-16 hover:scale-125" />
+            <img src="./images/stack/React.png" class="w-16 hover:scale-125" />
+            <img src="./images/stack/NodeJs.svg" class="w-16 hover:scale-125" />
+            <img src="./images/stack/Next.svg" class="w-16 hover:scale-125" />
+            <img src="../images/stack/Redux.svg" class="w-16 hover:scale-125" />
             <img
               src="./images/stack/Tailwind.png"
               class="w-16 hover:scale-125"
@@ -316,12 +305,8 @@
               src="./images/stack/Express.png"
               class="w-16 hover:scale-125"
             />
-            <img src="./images/stack/Git.svg"
-             class="w-16 hover:scale-125" />
-            <img
-              src="./images/stack/Github.svg"
-              class="w-16 hover:scale-125"
-            />
+            <img src="./images/stack/Git.svg" class="w-16 hover:scale-125" />
+            <img src="./images/stack/Github.svg" class="w-16 hover:scale-125" />
             <img
               src="./images/stack/MongoDB.svg"
               class="w-16 hover:scale-125"
