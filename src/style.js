@@ -74,41 +74,23 @@ if (themeToggle) {
   });
 }
 
+ const menu = document.getElementById("mobile-menu");
+const toggle = document.getElementById("menu-toggle");
+const menuLinks = menu.querySelectorAll("a"); 
 
 
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("translate-x-0");
+  menu.classList.toggle("translate-x-full");
+});
 
- 
 
-  const menu = document.getElementById("mobile-menu");
-  const toggle = document.getElementById("menu-toggle");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("translate-x-0");   
-    menu.classList.toggle("translate-x-full"); 
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("translate-x-0");
+    menu.classList.add("translate-x-full");
   });
-
-
-  const items = document.querySelectorAll(
-    "#timeline li, #experience li"
-  );
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-         
-          if (index % 2 === 0) {
-            entry.target.classList.add("animate-leftIn");
-          } else {
-            entry.target.classList.add("animate-rightIn");
-          }
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  items.forEach((item) => observer.observe(item));
+});
 
 
 
