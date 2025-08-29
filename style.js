@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter a valid email address.");
       return;
     }
+    
 
     const serviceID = "service_4rjvgyd";
     const templateID = "template_t19raba";
