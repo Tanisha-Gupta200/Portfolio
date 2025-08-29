@@ -78,22 +78,15 @@ if (themeToggle) {
 
 
  
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const menuLinks = document.querySelectorAll("#mobile-menu a");
 
-  menuBtn.addEventListener("click", () => {
-    const isOpen = !mobileMenu.classList.contains("hidden");
-    mobileMenu.classList.toggle("hidden");
-    document.body.style.overflow = isOpen ? "auto" : "hidden";
+  const menu = document.getElementById("mobile-menu");
+  const toggle = document.getElementById("menu-toggle");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("translate-x-0");   
+    menu.classList.toggle("translate-x-full"); 
   });
 
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-      document.body.style.overflow = "auto";
-    });
-  });
 
   const items = document.querySelectorAll(
     "#timeline li, #experience li"
