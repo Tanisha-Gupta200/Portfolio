@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  emailjs.init("WBRln_LmPNRF3iD5U"); //public key used
 
-  emailjs.init("WBRln_LmPNRF3iD5U");
-
-  
   const form = document.getElementById("contact-form");
   const nameInput = document.getElementById("Name");
   const emailInput = document.getElementById("Email");
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -31,11 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
       message: messageInput.value.trim(),
     };
 
- 
     if (formData.name.length < 4) {
       nameError.textContent = "Name must be at least 4 characters long.";
       nameError.classList.remove("hidden");
-      alert("Name must be at least 4 characters long.")
+      alert("Name must be at least 4 characters long.");
       return;
     }
 
@@ -44,15 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter a valid email address.");
       return;
     }
-    
 
     const serviceID = "service_4rjvgyd";
     const templateID = "template_t19raba";
 
     emailjs.send(serviceID, templateID, formData).then(
       function () {
-        alert("thanks to submit")
-        window.location.href = "thankYou.html"; 
+        alert("thanks to submit");
+        window.location.href = "thankYou.html";
       },
       function (error) {
         alert("Failed to send email. Please try again.");
@@ -61,40 +56,35 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-const themeToggle = document.getElementById("theme-toggle");
-const allSections = document.querySelectorAll("body, main, section"); 
-const colors = ["lightblue", "lightgreen", "lightgray","white"];
-let currentColorIndex = 0;
+  const themeToggle = document.getElementById("theme-toggle");
+  const allSections = document.querySelectorAll("body, main, section");
+  const colors = ["lightblue", "lightgreen", "lightgray", "white"];
+  let currentColorIndex = 0;
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    allSections.forEach((el) => {
-      el.style.backgroundColor = colors[currentColorIndex];
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      allSections.forEach((el) => {
+        el.style.backgroundColor = colors[currentColorIndex];
+      });
+      currentColorIndex = (currentColorIndex + 1) % colors.length;
     });
-    currentColorIndex = (currentColorIndex + 1) % colors.length;
-    
+  }
+
+  const menu = document.getElementById("mobile-menu");
+  const toggle = document.getElementById("menu-toggle");
+  const menuLinks = menu.querySelectorAll("a");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("translate-x-0");
+    menu.classList.toggle("translate-x-full");
   });
-}
 
- const menu = document.getElementById("mobile-menu");
-const toggle = document.getElementById("menu-toggle");
-const menuLinks = menu.querySelectorAll("a"); 
-
-
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("translate-x-0");
-  menu.classList.toggle("translate-x-full");
-});
-
-
-menuLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("translate-x-0");
-    menu.classList.add("translate-x-full");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("translate-x-0");
+      menu.classList.add("translate-x-full");
+    });
   });
-});
-
-
 
   new Typed(".role", {
     strings: ["Web Developer", "UI Designer", "Coder", "Java Developer"],
